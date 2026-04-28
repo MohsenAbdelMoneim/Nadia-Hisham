@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nadia Hisham | Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #050810;
+            color: #ffffff;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .neon-text {
+            background: linear-gradient(90deg, #00f2fe, #4facfe, #7000ff, #00f2fe);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: cloud-move 3s linear infinite;
+        }
+
+        @keyframes cloud-move {
+            to { background-position: 200% center; }
+        }
+
+        .neon-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .skill-badge {
+            background: rgba(79, 172, 254, 0.1);
+            border: 1px solid rgba(79, 172, 254, 0.3);
+            padding: 5px 12px;
+            border-radius: 10px;
+            font-size: 13px;
+            color: #4facfe;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem !important; line-height: 1.2 !important; }
+            .name-fix { display: block !important; margin-top: 8px; }
+            #hero-btns { flex-direction: column !important; width: 100%; }
+        }
+
+        .reveal { opacity: 0; transform: translateY(20px); }
+        a, button { -webkit-tap-highlight-color: transparent; }
+    </style>
+</head>
+
+<body>
+
+<nav class="fixed w-full z-50 bg-[#050810]/80 backdrop-blur-lg border-b border-white/5">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="text-xl font-bold neon-text">NADIA.H</a>
+        <div class="flex space-x-4 space-x-reverse text-sm">
+            <a href="#about" class="hover:text-cyan-400">عني</a>
+            <a href="#experience" class="hover:text-cyan-400">الخبرة</a>
+            <a href="#contact" class="hover:text-cyan-400">تواصل</a>
+        </div>
+    </div>
+</nav>
+
+<section class="min-h-screen flex items-center justify-center text-center px-6 pt-20">
+    <div class="w-full max-w-5xl">
+        <div id="badge" class="opacity-0 inline-block px-4 py-1 mb-6 text-[10px] font-bold text-cyan-400 bg-cyan-400/10 rounded-full uppercase tracking-widest">
+            MIS Student & UI/UX Beginner
+        </div>
+
+        <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
+            أهلاً، أنا <br>
+            <span class="neon-text name-fix" id="animate-name" style="direction: ltr; display: inline-block;">Nadia Hisham</span>
+        </h1>
+
+        <p id="hero-desc" class="opacity-0 text-slate-400 text-base md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+            مُصممة واجهات مستخدم (UI/UX) مبتدئة، أمتلك خلفية قوية في الإدارة وخدمة العملاء، وأسعى لدمج مهاراتي التحليلية في نظم المعلومات الإدارية مع شغفي بالتصميم.
+        </p>
+
+        <div id="hero-btns" class="opacity-0 flex gap-4 justify-center">
+            <a href="#contact" class="px-8 py-4 bg-cyan-500 text-black rounded-2xl font-bold hover:bg-cyan-400 transition">تواصل معي</a>
+            <a href="https://www.reallygreatsite.com" target="_blank" class="px-8 py-4 bg-white/10 rounded-2xl font-bold border border-white/10 hover:bg-white/20 transition">الموقع الشخصي</a>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="py-16 px-6 reveal">
+    <div class="container mx-auto max-w-5xl">
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="neon-card p-8">
+                <h2 class="neon-text text-2xl font-bold mb-4">الملف الشخصي</h2>
+                <p class="text-slate-300 leading-relaxed text-sm md:text-base">
+                    لدي خبرة كمشرفة في شركة Dice للملابس، مما صقل مهاراتي في تنسيق الفرق ومراقبة الجودة. كما عملت كوكيل خدمة عملاء، مما ساعدني في تطوير مهارات تواصل وحل مشكلات ممتازة.
+                </p>
+            </div>
+            <div class="neon-card p-8 border-cyan-500/20">
+                <h2 class="neon-text text-2xl font-bold mb-4">التعليم</h2>
+                <h3 class="text-white font-bold">بكالوريوس نظم المعلومات الإدارية (MIS)</h3>
+                <p class="text-sm text-slate-400 mb-2">المعهد العالي للدراسات المتطورة - القطامية</p>
+                <p class="text-xs text-cyan-400">2022 – متوقع 2026</p>
+                <p class="text-slate-400 text-xs mt-2">دراسة قواعد البيانات، تحليل النظم، وتطبيقات الأعمال.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-10 px-6 reveal">
+    <div class="container mx-auto max-w-5xl">
+        <h2 class="text-center neon-text text-2xl font-bold mb-8">المهارات</h2>
+        <div class="flex flex-wrap justify-center gap-3">
+            <span class="skill-badge">UI/UX Design</span>
+            <span class="skill-badge">Figma (Basic)</span>
+            <span class="skill-badge">Systems Analysis</span>
+            <span class="skill-badge">Communication</span>
+            <span class="skill-badge">Teamwork</span>
+            <span class="skill-badge">Problem Solving</span>
+            <span class="skill-badge">Decision Making</span>
+            <span class="skill-badge">Microsoft Office</span>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="py-16 px-6 reveal">
+    <div class="container mx-auto max-w-5xl">
+        <h2 class="text-3xl text-center font-bold mb-10 neon-text">الخبرة العملية</h2>
+        <div class="space-y-6">
+            <div class="neon-card p-6 border-r-4 border-r-cyan-500">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-xl text-white">Supervisor</h3>
+                    <span class="text-xs text-slate-500">2020 - 2023</span>
+                </div>
+                <p class="text-cyan-400 text-sm mb-3 font-medium">Dice Clothing Company</p>
+                <ul class="text-slate-400 text-xs space-y-2 list-disc list-inside">
+                    <li>الإشراف على الفرق وتدريب الموظفين الجدد.</li>
+                    <li>مراقبة الجودة ومساعدة الإدارة في اتخاذ القرارات.</li>
+                    <li>التعامل مع شكاوى العملاء وتحسين مستوى الخدمة.</li>
+                </ul>
+            </div>
+
+            <div class="neon-card p-6 border-r-4 border-r-purple-500">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-xl text-white">Call Center Representative</h3>
+                    <span class="text-xs text-slate-500">2022</span>
+                </div>
+                <p class="text-purple-400 text-sm mb-3 font-medium">Charity Organization</p>
+                <p class="text-slate-400 text-xs">تقديم الدعم عبر الهاتف، معالجة الاستفسارات، وضمان رضا المتصلين.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-20 px-6 text-center reveal">
+    <h2 class="text-3xl font-bold neon-text mb-10">تواصل معي</h2>
+    <div class="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        <a href="tel:01114763489" class="neon-card p-5 hover:scale-105 transition">
+            <i class="fas fa-phone-alt text-cyan-400 mb-2"></i>
+            <p class="text-xs text-slate-400">هاتف</p>
+            <p class="text-sm">01114763489</p>
+        </a>
+        <a href="mailto:heshamnada014@gmail.com" class="neon-card p-5 hover:scale-105 transition">
+            <i class="fas fa-envelope text-cyan-400 mb-2"></i>
+            <p class="text-xs text-slate-400">بريد إلكتروني</p>
+            <p class="text-sm">heshamnada014@gmail.com</p>
+        </a>
+        <div class="neon-card p-5">
+            <i class="fas fa-map-marker-alt text-cyan-400 mb-2"></i>
+            <p class="text-xs text-slate-400">العنوان</p>
+            <p class="text-sm">حلوان، القاهرة</p>
+        </div>
+    </div>
+</section>
+
+<footer class="text-center py-10 text-slate-600 text-[10px] tracking-widest uppercase">
+    © 2026 NADIA HISHAM IBRAHIM • UI/UX PORTFOLIO
+</footer>
+
+<script>
+    window.addEventListener('load', () => {
+        const tl = gsap.timeline();
+        tl.to("#badge", { opacity: 1, y: 0, duration: 0.6, ease: "back.out(1.7)" })
+          .to("#animate-name", { opacity: 1, duration: 0.8 }, "-=0.3")
+          .to("#hero-desc", { opacity: 1, y: 0, duration: 0.6 }, "-=0.4")
+          .to("#hero-btns", { opacity: 1, y: 0, duration: 0.6 }, "-=0.4");
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                gsap.to(entry.target, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" });
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
